@@ -1,0 +1,102 @@
+* {
+  /* border: 2px solid brown; */
+}
+
+html, body, .flex-container{
+  /* border: 1px solid green; */
+  height: 100%;
+  margin: 5px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  height: 100%;
+}
+
+.player-left-container, .player-right-container {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 25%;
+  background-color: pink;
+}
+
+.player-left, .player-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-center-container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 50%;
+  background-color: lightblue;
+}
+
+/* .main-center {
+  display: flex;
+} */
+
+.main-title {
+  display: flex;
+  justify-content: space-around;
+  font-size: 50px;
+  color: rebeccapurple;
+  margin-top: 75px;
+}
+
+h1 {
+  align-items: center;
+  margin-bottom: 0;
+  font-size: 45px;
+}
+
+p {
+  font-size: 32px;
+  margin-top: 5px;
+  color: rebeccapurple;
+}
+
+.game-box {
+  /* display: grid;
+  grid-template-columns: auto auto auto; */
+  display: table;
+  border-collapse: collapse;
+  border-color: red;
+  margin-top: 100px;
+  width: 500px;
+  height: 500px;
+}
+
+td {
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  height: 100px;
+  width: 100px;
+}
+
+/* img.emoji {
+  // Override any img styles to ensure Emojis are displayed inline
+  margin: 0px !important;
+  display: inline !important;
+
+  height: auto;
+  width: 50px;
+} */
+
+.square-1, .square-2, .square-4, .square-5, .square-7, .square-8 {
+  border-right: 4px solid blue;
+}
+.square-1, .square-2, .square-3, .square-4, .square-5, .square-6 {
+  border-bottom: 4px solid blue;
+}
