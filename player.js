@@ -1,6 +1,11 @@
 class Player {
-  constructor(){
-
+  constructor(one, img){
+    this.id = one
+    this.token = img
+    this.wins = 0
+  }
+  increaseWins(){
+    console.log('win')
   }
 }
 
