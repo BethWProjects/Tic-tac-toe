@@ -8,11 +8,17 @@ class Game {
   playersTurn(){
     //use the modulo operator to say if player divides by 2 then it's player 2's turn, else it's player 1's turn
   }
-  updateWinCondition(){
+  tileSelected(){
     //if the player clicks a box, update the turn
   }
   checkWinner(){
     //check winning numbers
+  }
+  checkDefault(){
+    //check default scenario players selection !== winningNumbers option
+  }
+  resetFunction(){
+    //reset 
   }
 }
 
