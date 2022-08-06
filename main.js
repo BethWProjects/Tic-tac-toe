@@ -3,10 +3,8 @@
 //query selectors
 
 //data
+// var playerMoves = []  move player moves/clicks into this array
 
-var winningNumbers = [
-
-]
 
 //event listeners
 //event listener for playGame function on click
