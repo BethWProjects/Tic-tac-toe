@@ -1,13 +1,18 @@
  //file that contains all DOM related JavaScript
 
 //query selectors
+var tiles = document.getElementById('tiles')
 
 //data
-// var playerMoves = []  move player moves/clicks into this array
-
 
 //event listeners
 //event listener for playGame function on click
+tiles.addEventListener('click', playGame);
+
+//functions
+function playGame(){
+    console.log('hello')
+}
 
 //function to update the dom using using innerHTML
 // function playGame(){
