@@ -1,5 +1,7 @@
 class Game {
   constructor(){
+    this.player1 = new Player(1, "🦄")
+    this.player2 = new Player(2, "🌈")
     this.turn = 0
     this.score = []
   }
@@ -14,14 +16,19 @@ class Game {
     }
     console.log("player turn")
   }
-  // tileSelected(){
-  //   //if the player clicks a box, update the turn
-  //   this.player1
-  // }
-  // checkWinner(){
-  //   //check winning numbers
-  //   if (this.score)
-  // }
+  tileSelected(){
+    //if the player clicks a box, invoke checkWinner
+    checkWinner()
+    if
+
+  }
+  checkWinner(){
+    if (this.turn === 1 && winningNumbers.contains(this.score)) {
+      this.player1.wins += 1
+    } else if (this.turn === 2 && winningNumbers.contains(this.score)){
+      this.player2.wins += 1
+    }
+  }
   checkDefault(){
     //check default scenario players selection !== winningNumbers option
   }
