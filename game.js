@@ -1,24 +1,32 @@
 class Game {
   constructor(){
-    this.player1 = new Player(one, img)
-    this.player2 = new Player(one, img)
     this.turn = 0
-    this.score
+    this.score = []
   }
   playersTurn(){
     //use the modulo operator to say if player divides by 2 then it's player 2's turn, else it's player 1's turn
+    if (this.turn === 0) {
+      this.turn = 1
+    } else if (this.turn === 1){
+      this.turn = 2
+    } else {
+      this.turn = 1
+    }
+    console.log("player turn")
   }
-  tileSelected(){
-    //if the player clicks a box, update the turn
-  }
-  checkWinner(){
-    //check winning numbers
-  }
+  // tileSelected(){
+  //   //if the player clicks a box, update the turn
+  //   this.player1
+  // }
+  // checkWinner(){
+  //   //check winning numbers
+  //   if (this.score)
+  // }
   checkDefault(){
     //check default scenario players selection !== winningNumbers option
   }
   resetFunction(){
-    //reset 
+    //reset game if these conditions are met
   }
 }
 
@@ -28,6 +36,12 @@ class Game {
 var winningNumbers = [
  [1, 2, 3],
  [4, 5, 6],
+ [7, 8, 9],
+ [1, 5, 9],
+ [3, 5, 7],
+ [1, 4, 7],
+ [2, 5, 8],
+ [3, 6, 9]
 ]
 
 // A Game should include:
