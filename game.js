@@ -4,7 +4,7 @@ class Game {
     this.player1 = player1
     var player2 = new Player(2, "🌈")
     this.player2 = player2
-    this.turn = 1
+    this.turn = 0
     this.score = []
   }
   playersTurn(){
@@ -13,8 +13,9 @@ class Game {
       this.turn = player2.id
     } else {
       this.turn = player1.id
+      
     }
-    console.log("player turn")
+
   }
   //invoke updateBoard in main.js to grab data from player interaction
   updateBoxes(boxId){
@@ -27,13 +28,29 @@ class Game {
         }
 
   }
+
   checkWinner(){
     // checking the id of each player against the data of winningNumbers and the players boxes array
-    if (this.turn === 1 && winningNumbers.includes(player1.boxes)) {
-      this.player1.wins += 1
-    } else if (this.turn === 2 && winningNumbers.includes(player2.boxes)){
-      this.player2.wins += 1
+    // console.log('player boxes', player1.boxes, player2.boxes);
+
+    // for (var i = 0; i < winningNumbers.length; i++) {
+    //   var str1 = winningNumbers[i]
+    //   var ply1= player1.boxes
+    //   var ply2= player2.boxes
+    //
+    //   console.log("player1won?" , str1.includes(ply1))
+    //
+    player1.boxes.length > 3
+    if (player1.boxes === ['1', '2', '3']) {
+      player1.wins += 1
+      console.log('player1 wins')
+    } else if (player2.boxes === '1,2,3'){
+      player2.wins += 1
+      console.log('player2 wins')
+    } else {
+      console.log("draw")
     }
+  // }
   }
   checkDefault(){
     //check default scenario players selection !== winningNumbers option
@@ -47,14 +64,15 @@ class Game {
 // var playerMoves = []  move player moves/clicks into this array (THIS NEEDS TO BE DONE BEFORE UPDATING THE DOM)
 
 var winningNumbers = [
- [1, 2, 3],
- [4, 5, 6],
- [7, 8, 9],
- [1, 5, 9],
- [3, 5, 7],
- [1, 4, 7],
- [2, 5, 8],
- [3, 6, 9]
+ '1,2,3',
+ '4,5,6',
+ '7, 8, 9',
+ ['1', '2', '3'],
+ ['1', '5', '9'],
+ ['3', '5', '7'],
+ ['1', '4', '7'],
+ ['2', '5', '8'],
+ ['3', '6', '9']
 ]
 
 // A Game should include:
