@@ -1,31 +1,39 @@
 class Game {
-  constructor(){
-    this.player1 = new Player(1, "🦄")
-    this.player2 = new Player(2, "🌈")
+  constructor(player1, player2){
+    var player1 = new Player(1, "🦄")
+    this.player1 = player1
+    var player2 = new Player(2, "🌈")
+    this.player2 = player2
     this.turn = 0
     this.score = []
   }
   playersTurn(){
-    //use the modulo operator to say if player divides by 2 then it's player 2's turn, else it's player 1's turn
+    //instantiating 2 new players to access the player properties and method
     if (this.turn === 0) {
-      this.turn = 1
+      this.turn = player1.id
     } else if (this.turn === 1){
-      this.turn = 2
+      this.turn = player2.id
     } else {
-      this.turn = 1
+      this.turn = player1.id
     }
     console.log("player turn")
   }
-  tileSelected(){
-    //if the player clicks a box, invoke checkWinner
-    checkWinner()
-    if
+  //invoke updateBoard in main.js to grab data from player interaction
+  updateBoxes(boxId){
+      // this.score.push(data)
+      // for (var i = 0; i < this.score.length; i++) {
+        if (this.turn === 1) {
+          player1.boxes.push(boxId)
+        } else if (this.turn === 2) {
+          player2.boxes.push(boxId)
+        }
 
   }
   checkWinner(){
-    if (this.turn === 1 && winningNumbers.contains(this.score)) {
+    // checking the id of each player against the data of winningNumbers and the players boxes array
+    if (this.turn === 1 && winningNumbers.includes(player1.boxes)) {
       this.player1.wins += 1
-    } else if (this.turn === 2 && winningNumbers.contains(this.score)){
+    } else if (this.turn === 2 && winningNumbers.includes(player2.boxes)){
       this.player2.wins += 1
     }
   }
