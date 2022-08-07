@@ -29,9 +29,7 @@ function getTarget(e){
   var row = cell.parentElement;
   console.log(cell.innerHTML, row.rowIndex, cell.cellIndex);
 // adding the players token to the cell that was clicked
-  if (game.turn === 0) {
-    cell.innerHTML += ''
-  } else if (game.turn === 1) {
+if (game.turn === 1) {
     cell.innerHTML += `<td class="square-1">${player1.token}</td>`
     playerTurnTitle.innerText = `It's ${player2.token} 's turn`
     // player.updateBoxes(game.turn, data)
