@@ -4,14 +4,12 @@ class Game {
     this.player1 = player1
     var player2 = new Player(2, "🌈")
     this.player2 = player2
-    this.turn = 0
+    this.turn = 1
     this.score = []
   }
   playersTurn(){
     //instantiating 2 new players to access the player properties and method
-    if (this.turn === 0) {
-      this.turn = player1.id
-    } else if (this.turn === 1){
+    if (this.turn === 1){
       this.turn = player2.id
     } else {
       this.turn = player1.id
