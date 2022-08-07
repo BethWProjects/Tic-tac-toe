@@ -18,11 +18,16 @@ tiles.addEventListener('click', updateTurn);
 //
 // }
 function updateTurn(){
+  var boxId;
   game.playersTurn()
+  game.updateBoxes(boxId)
+  game.checkWinner()
   if (game.turn === 1) {
     tiles.innerHTML += `<td class="square-1">${player1.token}</td>`
+    // player.updateBoxes(game.turn, data)
   } else if (game.turn === 2) {
     tiles.innerHTML += `<td class="square-1">${player2.token}</td>`
+    // player.updateBoxes(game.turn, data)
   }
   console.log("update tiles");
 }

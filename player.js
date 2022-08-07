@@ -3,10 +3,16 @@ class Player {
     this.id = id
     this.token = img
     this.wins = 0
+    this.boxes = []
   }
   increaseWins(){
     console.log('win')
   }
+  // updateBoxes(playerNum, box){
+  //   if (playerNum === 1) {
+  //     this.boxes.push(box)
+  //   }
+  // }
 }
 var player1 = new Player(1, "🦄")
 var player2 = new Player(2, "🌈")
