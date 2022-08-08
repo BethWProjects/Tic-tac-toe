@@ -5,10 +5,13 @@ class Game {
     var player2 = new Player(2, "🌈")
     this.player2 = player2
     this.turn = 0
+    this.counter = 0
+    this.winner = null
     //this.score = []
   }
   playersTurn(){
     //instantiating 2 new players to access the player properties and method
+    this.counter++
     if (this.turn === 1) {
       this.turn = player2.id
     } else {
@@ -29,7 +32,6 @@ class Game {
   checkWinner(){
     // checking the id of each player against the data of winningNumbers and the players boxes array
     // console.log('player boxes', player1.boxes, player2.boxes);
-
     var winningNumbers = [
      [0, 1, 2],
      [3, 4, 5],
@@ -40,22 +42,30 @@ class Game {
      [0, 4, 8],
      [2, 4, 6]
     ]
-
     for (var i = 0; i < winningNumbers.length; i++) {
 
     if ((player1.boxes.includes(winningNumbers[i][0]))
     && (player1.boxes.includes(winningNumbers[i][1]))
     && (player1.boxes.includes(winningNumbers[i][2]))) {
       player1.wins += 1
-      console.log('player1 wins')
+      this.winner = true
+      console.log('player1 wins', this.winner)
     } if ((player2.boxes.includes(winningNumbers[i][0]))
     && (player2.boxes.includes(winningNumbers[i][1]))
     && (player2.boxes.includes(winningNumbers[i][2]))) {
       player2.wins += 1
-      console.log('player2 wins')
+      this.winner = true
+      console.log('player2 wins', this.winner)
     }
   }
 }
+  updateDraw(){
+    if (this.counter > 7 && this.winner !== true) {
+      this.winner = false
+      console.log('draw')
+      return "This game is a DRAW"
+    }
+  }
 }
 
   // checkDefault(){
