@@ -53,7 +53,7 @@ if (game.turn === 1) {
 
   // Need to check winner after the player's "boxes" is updated
   game.checkWinner()
-
+  game.updateDraw()
 }
 //
 // function clearBoard(){
