@@ -2,6 +2,7 @@
 //instantiated classes
 var game = new Game(player1, player2)
 var player = new Player()
+var playerTurnTitle = document.querySelector('#player-turn')
 
 //query selectors with matched event listeners
 /* -created a query Selector for the entire table body(parent node)
@@ -20,7 +21,6 @@ function getTarget(e){
   /* getTarget function uses event delegation to target the individual cells
   in the table, calling on the parent node.  When invoked in the event listener
   the innerHTML and innerText will update on click. */
-  var playerTurnTitle = document.querySelector('#player-turn')
   var cell = e.target.closest('td');
   if (!cell) {return;} // Quit, not clicked on a cell
   // const row = cell.parentElement;
@@ -53,7 +53,16 @@ if (game.turn === 1) {
 
   // Need to check winner after the player's "boxes" is updated
   game.checkWinner()
+  updateTitle()
   game.updateDraw()
+}
+
+function updateTitle(){
+  if (game.winner === "Player 1 Wins") {
+    playerTurnTitle.innerText = `${player1.token} Won!`
+  } if (game.winner === "Player 2 Wins") {
+    playerTurnTitle.innerText = `${player2.token} Won!`
+}
 }
 //
 // function clearBoard(){
