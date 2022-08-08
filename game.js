@@ -48,20 +48,20 @@ class Game {
     && (player1.boxes.includes(winningNumbers[i][1]))
     && (player1.boxes.includes(winningNumbers[i][2]))) {
       player1.wins += 1
-      this.winner = true
+      this.winner = "Player 1 Wins"
       console.log('player1 wins', this.winner)
     } if ((player2.boxes.includes(winningNumbers[i][0]))
     && (player2.boxes.includes(winningNumbers[i][1]))
     && (player2.boxes.includes(winningNumbers[i][2]))) {
       player2.wins += 1
-      this.winner = true
+      this.winner = "Player 2 Wins"
       console.log('player2 wins', this.winner)
     }
   }
 }
   updateDraw(){
     if (this.counter > 7 && this.winner !== true) {
-      this.winner = false
+      this.winner = null
       console.log('draw')
       return "This game is a DRAW"
     }
