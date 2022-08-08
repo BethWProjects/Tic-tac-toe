@@ -58,7 +58,7 @@ class Game {
   }
 }
   updateDraw(){
-    if (this.counter > 8 && this.winner !== true) {
+    if (this.counter >= 8 && this.winner !== true) {
       this.winner = "tie"
       console.log('draw')
       return "This game is a DRAW"
