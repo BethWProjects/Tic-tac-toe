@@ -1,10 +1,13 @@
  //file that contains all DOM related JavaScript
 //instantiated classes
 var game = new Game(player1, player2)
-var player = new Player()
+var player1 = new Player(1, "🦄")
+var player2 = new Player(2, "🌈")
 var playerTurnTitle = document.querySelector('#player-turn')
 var playerOneTitle = document.querySelector('#player-one')
 var playerTwoTitle = document.querySelector("#player-two")
+var gameBoard = document.querySelector('.game-grid')
+var gameSpaces = document.querySelectorAll('td')
 
 //query selectors with matched event listeners
 /* -created a query Selector for the entire table body(parent node)
@@ -16,6 +19,7 @@ tbody.addEventListener('click', getTarget);
 
 
 //functions
+
 function getTarget(e){
   //invoking game functions to sync data model
   if (event.target.textContent.includes('🦄') || event.target.textContent.includes('🌈')){
@@ -58,8 +62,15 @@ if (game.turn === 1) {
 
   // Need to check winner after the player's "boxes" is updated
   game.checkWinner()
-  game.updateDraw()
+  playerWon()
   updateTitle()
+}
+
+function playerWon(){
+  game.updateDraw()
+  if (game.winner){
+    hideBoard()
+  }
 }
 
 function updateTitle(){
@@ -78,6 +89,20 @@ function updateTitle(){
   if (player2.wins > 0) {
     playerTwoTitle.innerText = `${player2.wins} Win`
   }
+}
+
+function hideBoard(){
+  gameBoard.classList.add('hidden')
+  setTimeout(newGame, 2500)
+}
+
+function newGame(){
+  gameBoard.classList.remove('hidden')
+  game.resetGame()
+  for (var i = 0; i < gameSpaces.length; i++) {
+    gameSpaces[i].innerText = ""
+  }
+  
 }
 //
 // function clearBoard(){
