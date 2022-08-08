@@ -1,8 +1,6 @@
 class Game {
   constructor(player1, player2){
-    var player1 = new Player(1, "🦄")
     this.player1 = player1
-    var player2 = new Player(2, "🌈")
     this.player2 = player2
     this.turn = 0
     this.counter = 0
@@ -64,6 +62,18 @@ class Game {
       this.winner = "tie"
       console.log('draw')
       return "This game is a DRAW"
+    }
+  }
+  resetGame(){
+    //invoke this in newGame
+    player1.boxes = []
+    player2.boxes = []
+    this.counter = 0
+    this.winner = null
+    if (this.winner === "Player 1 Wins"){
+      this.turn = 2
+    } else if (this.winner === "Player 2 Wins") {
+      this.turn = 1
     }
   }
 }
