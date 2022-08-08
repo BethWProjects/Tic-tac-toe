@@ -2,6 +2,9 @@
 //instantiated classes
 var game = new Game(player1, player2)
 var player = new Player()
+var playerTurnTitle = document.querySelector('#player-turn')
+var playerOneTitle = document.querySelector('#player-one')
+var playerTwoTitle = document.querySelector("#player-two")
 
 //query selectors with matched event listeners
 /* -created a query Selector for the entire table body(parent node)
@@ -15,12 +18,14 @@ tbody.addEventListener('click', getTarget);
 //functions
 function getTarget(e){
   //invoking game functions to sync data model
+  if (event.target.textContent.includes('🦄') || event.target.textContent.includes('🌈')){
+    return 'alert'
+  }
   game.playersTurn()
 
   /* getTarget function uses event delegation to target the individual cells
   in the table, calling on the parent node.  When invoked in the event listener
   the innerHTML and innerText will update on click. */
-  var playerTurnTitle = document.querySelector('#player-turn')
   var cell = e.target.closest('td');
   if (!cell) {return;} // Quit, not clicked on a cell
   // const row = cell.parentElement;
@@ -54,6 +59,25 @@ if (game.turn === 1) {
   // Need to check winner after the player's "boxes" is updated
   game.checkWinner()
   game.updateDraw()
+  updateTitle()
+}
+
+function updateTitle(){
+  if (game.winner === "Player 1 Wins") {
+    playerTurnTitle.innerText = `${player1.token}  Won!`
+  }
+  if (game.winner === "Player 2 Wins") {
+    playerTurnTitle.innerText = `${player2.token}  Won!`
+  }
+  if (game.winner === "tie") {
+    playerTurnTitle.innerText = `This Game is a Draw`
+  }
+  if (player1.wins > 0) {
+    playerOneTitle.innerText = `${player1.wins} Win`
+  }
+  if (player2.wins > 0) {
+    playerTwoTitle.innerText = `${player2.wins} Win`
+  }
 }
 //
 // function clearBoard(){
