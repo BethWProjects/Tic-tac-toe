@@ -20,6 +20,22 @@ html, body, .flex-container {
   height: 100%;
   width: 25%;
   background-color: pink;
+  background-image: linear-gradient(
+    pink,
+    #E6E6FA 99%
+    );
+}
+
+.player-left-container {
+  border-top: 4px solid pink;
+  border-left: 4px solid pink;
+  border-bottom: 4px solid pink;
+}
+
+.player-right-container {
+  border-top: 4px solid pink;
+  border-right: 4px solid pink;
+  border-bottom: 4px solid pink;
 }
 
 .player-left, .player-right {
@@ -34,6 +50,11 @@ html, body, .flex-container {
   height: 100%;
   width: 50%;
   background-color: lightblue;
+  background-image: linear-gradient(
+    lightblue,
+    #FFFF8F 99%
+    );
+  border: 4px solid lightblue;
 }
 
 .main-title {
@@ -74,6 +95,7 @@ td {
   height: 100px;
   width: 100px;
   cursor: pointer;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .hidden {
@@ -81,8 +103,8 @@ td {
 }
 
 .square-1, .square-2, .square-4, .square-5, .square-7, .square-8 {
-  border-right: 4px solid blue;
+  border-right: 8px solid #CF9FFF;
 }
 .square-1, .square-2, .square-3, .square-4, .square-5, .square-6 {
-  border-bottom: 4px solid blue;
+  border-bottom: 8px solid #CF9FFF;
 }
