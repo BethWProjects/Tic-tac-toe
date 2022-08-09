@@ -12,13 +12,13 @@
  - [Contributors](#contributors)
  - [Project Specs](#project-specs)
 ## Introduction
- -
+ - 
 ## Technologies
  - Javascript
  - HTML
  - CSS
 ## Illustrations
- ![Tic-Tac-Toe](Screen Shot 2022-08-04 at 10.31.01 AM.png)
+ ![Screenshot](Screen Shot 2022-08-04 at 10.31.01 AM.png)
 ## Features
 -
 -
