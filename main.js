@@ -10,6 +10,7 @@ var playerTwoTitle = document.querySelector("#player-two")
 var gameBoard = document.querySelector('.game-grid')
 var gameSpaces = document.querySelectorAll('td')
 var tbody = document.querySelector('#tiles');
+var winner = document.querySelector('.winner')
 
 //event listeners
 tbody.addEventListener('click', getTarget);
@@ -69,11 +70,13 @@ function updateTitle() {
 
 function hideBoard() {
   gameBoard.classList.add('hidden')
+  winner.src = `assets/glitter-stars.gif`
   setTimeout(newGame, 2000)
 }
 
 function newGame() {
   gameBoard.classList.remove('hidden')
+  winner.src = ``
   game.resetGame()
   for (var i = 0; i < gameSpaces.length; i++) {
     gameSpaces[i].innerText = ""
