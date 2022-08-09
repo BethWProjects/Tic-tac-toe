@@ -78,6 +78,12 @@ p {
   color: rebeccapurple;
 }
 
+img {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 3%;
+  margin-top: 50px;
+}
+
 /* game box styles */
 .game-box {
   display: table;
