@@ -61,10 +61,10 @@ function updateTitle() {
     playerTurnTitle.innerText = `This Game is a Draw`
   }
   if (player1.wins > 0) {
-    playerOneTitle.innerText = `${player1.wins} Win`
+    playerOneTitle.innerText = `Wins:  ${player1.wins}`
   }
   if (player2.wins > 0) {
-    playerTwoTitle.innerText = `${player2.wins} Win`
+    playerTwoTitle.innerText = `Wins:  ${player2.wins}`
   }
 }
 
