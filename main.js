@@ -34,11 +34,9 @@ function getTarget(e) {
     playerTurnTitle.innerText = `It's ${player1.token} 's turn`
   }
 
-  //pass in targeted element id to update player box data
   var boxId = cell.id
   game.updateBoxes(boxId)
 
-  // check winner after the player's "boxes" is updated
   game.checkWinner()
   playerWon()
   updateTitle()
@@ -71,7 +69,7 @@ function updateTitle() {
 
 function hideBoard() {
   gameBoard.classList.add('hidden')
-  setTimeout(newGame, 1000)
+  setTimeout(newGame, 2000)
 }
 
 function newGame() {
