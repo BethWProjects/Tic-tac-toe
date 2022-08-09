@@ -18,14 +18,14 @@
  - HTML
  - CSS
 ## Illustrations
- ![Screenshot](assets/Screen Shot 2022-08-09 at 11.17.12 AM.png)
+ ![Screenshot](/assets/screenshot1.png)
 ## Features
 - Users are able to play a game of Tic-Tac-Toe and watch their scores increase on each win.
 - Player turns will change on each game to allow players an equal amount of turns between games.
 - The score columns will reflect the wins of each player.
 - The main section will reflect the player's turn and if a player won or if it was a draw.
 ## Deployed Page
-Visit my Tic-Tac-Toe game here! [here](url)
+Tic-Tac-Toe game link coming soon! [here]()
 ## Possible Future Extensions
  -  Adding local storage is a goal for a future extension.
 ## Set Up
@@ -33,11 +33,11 @@ Visit my Tic-Tac-Toe game here! [here](url)
 2. Clone the repo to your local machine
 3. View the project in the browser by running open index.html in your terminal.
 ## Sources
- - [MDN](
- -[JavaTPoint](h
- -[YouTube](
- - [W3Schools](
+ - [MDN]
+ -[JavaTPoint]
+ -[YouTube]
+ - [W3Schools]
 ## Contributors
- - [Beth](
+ - [Beth]
 ## Project Specs
 - https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html
