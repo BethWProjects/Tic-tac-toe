@@ -1,9 +1,5 @@
-* {
-  /* border: 2px solid brown; */
-}
-
-html, body, .flex-container{
-  /* border: 1px solid green; */
+/* main container layout */
+html, body, .flex-container {
   height: 100%;
   margin: 5px;
 }
@@ -19,7 +15,6 @@ html, body, .flex-container{
 }
 
 .player-left-container, .player-right-container {
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-evenly;
   height: 100%;
@@ -34,17 +29,12 @@ html, body, .flex-container{
 }
 
 .main-center-container {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-evenly;
   height: 100%;
   width: 50%;
   background-color: lightblue;
 }
-
-/* .main-center {
-  display: flex;
-} */
 
 .main-title {
   display: flex;
@@ -54,21 +44,21 @@ html, body, .flex-container{
   margin-top: 75px;
 }
 
+/* title styles */
 h1 {
   align-items: center;
   margin-bottom: 0;
-  font-size: 45px;
+  font-size: 50px;
 }
 
 p {
-  font-size: 32px;
+  font-size: 36px;
   margin-top: 5px;
   color: rebeccapurple;
 }
 
+/* game box styles */
 .game-box {
-  /* display: grid;
-  grid-template-columns: auto auto auto; */
   display: table;
   border-collapse: collapse;
   border-color: red;
@@ -89,18 +79,6 @@ td {
 .hidden {
   display: none;
 }
-/* img.emoji {
-  // Override any img styles to ensure Emojis are displayed inline
-  margin: 0px !important;
-  display: inline !important;
-
-  height: auto;
-  width: 50px;
-} */
-
-/* .square {
-  border: 4px solid blue;
-} */
 
 .square-1, .square-2, .square-4, .square-5, .square-7, .square-8 {
   border-right: 4px solid blue;
