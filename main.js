@@ -102,7 +102,11 @@ function newGame(){
   for (var i = 0; i < gameSpaces.length; i++) {
     gameSpaces[i].innerText = ""
   }
-  
+  if (game.turn === 1) {
+      playerTurnTitle.innerText = `It's ${player2.token} 's turn`
+    } else if (game.turn === 2) {
+      playerTurnTitle.innerText = `It's ${player1.token} 's turn`
+    }
 }
 //
 // function clearBoard(){
