@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css">
   <title>Tic-Tac-Toe</title>
 </head>
-
 <body>
   <main class="flex-container">
     <section class="player-left-container">
-    <article class="player-left">
-      <h1>🦄</h1>
-      <p id="player-one"></p>
-    </article>
+      <article class="player-left">
+        <h1>🦄</h1>
+        <p id="player-one"></p>
+      </article>
     </section>
-
     <section class="main-center-container">
-    <article class="main-center">
-      <p id="player-turn" class="main-title">It's 🦄's turn</p>
-      <section class="game-grid">
-        <table class="game-box">
-          <tbody id="tiles" class="tbody">
-          <tr>
-            <td id="0" class="square-1"></td>
-            <td id="1" class="square-2"></td>
-            <td id="2" class="square-3"></td>
-          </tr>
-          <tr>
-            <td id="3" class="square-4"></td>
-            <td id="4" class="square-5"></td>
-            <td id="5" class="square-6"></td>
-          </tr>
-          <tr>
-            <td id="6" class="square-7"></td>
-            <td id="7" class="square-8"></td>
-            <td id="8" class="square-9"></td>
-          </tr>
-          </tbody>
-        </table>
-      </section>
-    </article>
+      <article class="main-center">
+        <p id="player-turn" class="main-title">It's 🦄's turn</p>
+        <section class="game-grid">
+          <table class="game-box">
+            <tbody id="tiles" class="tbody">
+              <tr>
+                <td id="0" class="square-1"></td>
+                <td id="1" class="square-2"></td>
+                <td id="2" class="square-3"></td>
+              </tr>
+              <tr>
+                <td id="3" class="square-4"></td>
+                <td id="4" class="square-5"></td>
+                <td id="5" class="square-6"></td>
+              </tr>
+              <tr>
+                <td id="6" class="square-7"></td>
+                <td id="7" class="square-8"></td>
+                <td id="8" class="square-9"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
     </section>
-
     <section class="player-right-container">
-    <article class="player-right">
-      <h1>🌈</h1>
-      <p id="player-two"></p>
-    </article>
+      <article class="player-right">
+        <h1>🌈</h1>
+        <p id="player-two"></p>
+      </article>
     </section>
   </main>
   <script src="./player.js"></script>
   <script src="./game.js"></script>
   <script src="./main.js"></script>
 </body>
-
 </html>
