@@ -18,7 +18,7 @@
  - HTML
  - CSS
 ## Illustrations
- ![Screenshot](/assets/screenshot1.png)
+ ![Screenshot](/assets/screenshot2.png)
 ## Features
 - Users are able to play a game of Tic-Tac-Toe and watch their scores increase on each win.
 - Player turns will change on each game to allow players an equal amount of turns between games.
