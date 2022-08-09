@@ -1,9 +1,5 @@
-* {
-  /* border: 2px solid brown; */
-}
-
-html, body, .flex-container{
-  /* border: 1px solid green; */
+/* main container layout */
+html, body, .flex-container {
   height: 100%;
   margin: 5px;
 }
@@ -19,12 +15,27 @@ html, body, .flex-container{
 }
 
 .player-left-container, .player-right-container {
-  /* border: 1px solid blue; */
   display: flex;
   justify-content: space-evenly;
   height: 100%;
   width: 25%;
   background-color: pink;
+  background-image: linear-gradient(
+    pink,
+    #E6E6FA 99%
+    );
+}
+
+.player-left-container {
+  border-top: 4px solid pink;
+  border-left: 4px solid pink;
+  border-bottom: 4px solid pink;
+}
+
+.player-right-container {
+  border-top: 4px solid pink;
+  border-right: 4px solid pink;
+  border-bottom: 4px solid pink;
 }
 
 .player-left, .player-right {
@@ -34,17 +45,17 @@ html, body, .flex-container{
 }
 
 .main-center-container {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-evenly;
   height: 100%;
   width: 50%;
   background-color: lightblue;
+  background-image: linear-gradient(
+    lightblue,
+    #FFFF8F 99%
+    );
+  border: 4px solid lightblue;
 }
-
-/* .main-center {
-  display: flex;
-} */
 
 .main-title {
   display: flex;
@@ -54,21 +65,21 @@ html, body, .flex-container{
   margin-top: 75px;
 }
 
+/* title styles */
 h1 {
   align-items: center;
   margin-bottom: 0;
-  font-size: 45px;
+  font-size: 50px;
 }
 
 p {
-  font-size: 32px;
+  font-size: 36px;
   margin-top: 5px;
   color: rebeccapurple;
 }
 
+/* game box styles */
 .game-box {
-  /* display: grid;
-  grid-template-columns: auto auto auto; */
   display: table;
   border-collapse: collapse;
   border-color: red;
@@ -84,27 +95,16 @@ td {
   height: 100px;
   width: 100px;
   cursor: pointer;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .hidden {
   display: none;
 }
-/* img.emoji {
-  // Override any img styles to ensure Emojis are displayed inline
-  margin: 0px !important;
-  display: inline !important;
-
-  height: auto;
-  width: 50px;
-} */
-
-/* .square {
-  border: 4px solid blue;
-} */
 
 .square-1, .square-2, .square-4, .square-5, .square-7, .square-8 {
-  border-right: 4px solid blue;
+  border-right: 8px solid #CF9FFF;
 }
 .square-1, .square-2, .square-3, .square-4, .square-5, .square-6 {
-  border-bottom: 4px solid blue;
+  border-bottom: 8px solid #CF9FFF;
 }
