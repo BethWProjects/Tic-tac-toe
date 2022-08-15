@@ -25,7 +25,7 @@
 - The score columns will reflect the wins of each player.
 - The main section will reflect the player's turn and if a player won or if it was a draw.
 ## Deployed Page
-Tic-Tac-Toe game link coming soon! [here]()
+Click here to play! [here](https://bethwprojects.github.io/Tic-tac-toe/)
 ## Possible Future Extensions
  -  Adding local storage is a goal for a future extension.
 ## Set Up
